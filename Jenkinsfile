@@ -5,7 +5,7 @@ pipeline{
 
     }
     environment{
-      docker_registry = "Nehak275/final_capstone"
+        docker_registry = "Nehak275/final_capstone"
         dockerhub_credentials = 'dockerhub_credentials'
         dockerImage = ''       
     }
@@ -32,7 +32,7 @@ pipeline{
                             docker.withRegistry('', dockerhub_credentials){
                                 dockerImage.push()
                                 dockerImage.push('latest')
-                                
+                                //dockerImage.push('v1')
                             }
                         }
                     }
